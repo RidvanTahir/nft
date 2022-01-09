@@ -1,0 +1,91 @@
+p {
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    padding: 2rem 0;
+    color: #e2e2e2;
+  }
+  
+  .wrapper > div:first-child {
+    text-align: right;
+    margin-right: 1rem;
+  }
+  
+  .wrapper > div:last-child {
+    margin-left: 1rem;
+  }
+  
+  .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #e2e2e2;
+    margin-right: auto;
+  }
+  
+  .title::after {
+    content: ".";
+    position: absolute;
+    right: -5px;
+    bottom: 3px;
+    font-size: 1.8rem;
+    font-family: serif;
+    color: #ba37af;
+    margin-right: auto;
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .instagram,
+  .facebook,
+  .twitter,
+  .discord,
+  .telegram,
+  .medium {
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+    transition: transform 0.3 ease;
+  }
+  
+  .instagram:hover,
+  .discord:hover,
+  .medium:hover,
+  .telegram:hover,
+  .twitter:hover,
+  .facebook:hover{
+    transform: scale(1.1);
+  }
+  
+  .instagram {
+    background-image: url('../images/instagram.png');
+  }
+  
+  .twitter {
+    background-image: url('../images/twitter.png');
+  }
+  .discord {
+    background-image: url('../images/discord.png');
+  }
+  .telegram {
+    background-image: url('../images/telegram.png');
+  }
+  .medium {
+    background-image: url('../images/medium.png');
+  }
+  .facebook {
+    background-image: url('../images/facebook.png');
+  }

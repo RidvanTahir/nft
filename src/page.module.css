@@ -1,0 +1,187 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin-right: 30px;
+}
+.header-picture {
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.header-title {
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -0.2rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.CTA {
+  display: block;
+  background-color: #ba37af;
+  color: white;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 10px 40px;
+  margin-right: auto;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.CTA:hover {
+  color: #ba37af;
+  background-color: #000000;
+  border: 1px solid #ba37af;
+}
+
+.hero {
+  width: 120vw;
+  height: 500px;
+  transform: translateX(calc((-120vw + 1080px) / 2));
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.description {
+  max-width: 600px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    transform: translateX(-5%);
+  }
+}
+.mission-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+}
+
+.mission-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  max-width: 500px;
+  margin-left: 30px;
+}
+
+.instagram {
+  background-image: url('./images/instagram.png');
+}
+
+.twitter {
+  background-image: url('./images/twitter.png');
+}
+.discord {
+  background-image: url('./images/discord.png');
+}
+.telegram {
+  background-image: url('./images/telegram.png');
+}
+.medium {
+  background-image: url('./images/medium.png');
+}
+.facebook {
+  background-image: url('./images/facebook.png');
+}
+
+.company-info {
+  margin-top: 60px;
+}
+
+.company-info p,
+.link {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: #ba37af;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.instagram,
+.twitter,
+.discord,
+.telegram,
+.twitter,
+.medium,
+.facebook {
+  background-size: 30px 30px;
+  height: 30px;
+  width: 30px;
+  margin-left: 1rem;
+  transition: transform 0.3 ease;
+}
+
+.instagram:hover,
+.twitter:hover,
+.discord:hover,
+.telegram:hover,
+.twitter:hover,
+.medium:hover,
+.facebook:hover {
+  transform: scale(1.1);
+}
+
+.subtitle {
+  font-size: 4rem;
+  line-height: 3rem;
+  letter-spacing: -0.2rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.section {
+  position: relative;
+  margin-top: 180px;
+  text-align: center;
+}
+
+.section::before,
+.section::after {
+  position: absolute;
+  display: inline-flex;
+  content: "";
+  background-size: 700px 700px;
+  height: 700px;
+  width: 700px;
+  z-index: -1;
+}
+
+.section::before {
+  top: 40%;
+  left: -40%;
+}
+
+.section::after {
+  top: 0;
+  right: -40%;
+}
+
+.artists {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+  flex-wrap: wrap;
+}

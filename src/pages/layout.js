@@ -1,41 +1,40 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import { Footer } from '../components/footer';
 import { container, banner, nav, navLinks, navLinkItem, navLinkText,siteTitle  } from './layout.module.css'
-import Footer from './footer'
 
-const Layout = ({ children }) => {
+
+const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
-  query{
-    site {
-      siteMetadata {
-        title
+    query{
+      site{
+        siteMetadata{
+          title
+        }
       }
-    }
-    wpPage(slug: {eq: "community"}) {
-      communityPage {
-        community {
-          socials {
-            discord
-            instagram
-            medium
-            telegram
-            twitter
+      wpPage {
+        communityPage {
+          community {
+            socials {
+              discord
+              instagram
+              medium
+              telegram
+              twitter
+            }
           }
         }
       }
     }
-  }
   `)
 
 
   return (
     <div className={container}>
-    <title>{data.site.siteMetadata.title}</title>
+    <title>{pageTitle} | {data.site.siteMetadata.title}</title>
     <nav className={nav}>
         <header className={siteTitle}>
-          <Link className={navLinkText} to="/">
-            {data.site.siteMetadata.title}
-          </Link>
+          {data.site.siteMetadata.title}
         </header>
         <ul className={navLinks}>
         <li>
@@ -55,17 +54,12 @@ const Layout = ({ children }) => {
               nfts
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link className={navLinkText} to="/community">
-              community
-            </Link>
-          </li>
         </ul>
       </nav>
       <main>
+        <h1>{pageTitle}</h1>
         {children}
       </main>
-      <Footer companyInfo={data.wpPage.communityPage.community} siteTitle={data.site.siteMetadata.title}/>
     </div>
   )
 }
